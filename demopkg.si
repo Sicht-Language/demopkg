@@ -1,0 +1,29 @@
+start
+create library demopkg
+
+create function demo_hello()
+    give "demo-ok"
+endfunction
+
+create function demo_prompt(text)
+    effect input
+    print text
+    set answer to input
+    give answer
+endfunction
+
+create function demo_menu(options)
+    effect input
+    set i to 0
+    for each o in(options)
+        print cast i to string + ": " + o
+        set i to i + 1
+    endfor
+    set choice to input "pick> "
+    give choice
+endfunction
+
+offer demo_hello
+offer demo_prompt
+offer demo_menu
+end
