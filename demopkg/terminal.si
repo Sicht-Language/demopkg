@@ -1,18 +1,14 @@
 start
-create library demopkg
+create library terminal
 
-create function demo_hello()
-    give "demo-ok"
-endfunction
-
-create function demo_prompt(text)
+create function terminal_prompt(text)
     effect input
     print text
     set answer to input
     give answer
 endfunction
 
-create function demo_menu(options)
+create function terminal_menu(options)
     effect input
     set i to 0
     for each o in(options)
@@ -23,7 +19,6 @@ create function demo_menu(options)
     give choice
 endfunction
 
-offer demo_hello
-offer demo_prompt
-offer demo_menu
+offer terminal_prompt
+offer terminal_menu
 end

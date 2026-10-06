@@ -1,0 +1,25 @@
+start
+create library demopkg
+
+load library "demopkg/terminal"
+take terminal_prompt from "demopkg/terminal"
+take terminal_menu from "demopkg/terminal"
+
+create function demo_hello()
+    give "demo-ok"
+endfunction
+
+create function demo_prompt(text)
+    effect input
+    give terminal_prompt(text)
+endfunction
+
+create function demo_menu(options)
+    effect input
+    give terminal_menu(options)
+endfunction
+
+offer demo_hello
+offer demo_prompt
+offer demo_menu
+end

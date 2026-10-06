@@ -4,7 +4,9 @@ Mock terminal-interface package for the Sicht registry.
 
 ## Layout
 
-- `demopkg.si` — the library (`demo_hello`, `demo_prompt`, `demo_menu`)
+- `demopkg/package.si` — the library (`demo_hello`, `demo_prompt`, `demo_menu`)
+- `demopkg/terminal.si` — terminal helpers used by the library
+- `tests/` — usage checks for the package
 - `sicht.toml` — package manifest and dependencies
 
 ## Use

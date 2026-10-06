@@ -1,0 +1,7 @@
+start
+load library "demopkg"
+take demo_hello from demopkg
+take demo_menu from demopkg
+print demo_hello()
+print demo_menu(["x", "y"])
+end
